@@ -1,0 +1,31 @@
+<?xml version="1.0" ?>
+<model xmlns="http://namespaces.plone.org/supermodel/schema"
+       xmlns:form="http://namespaces.plone.org/supermodel/form">
+    
+    <schema>
+		<field name="db_user" type="zope.schema.TextLine">
+			<description/>
+			<title>Database User</title>
+            <default>postgres</default>
+		</field>
+		<field name="db_pwd" type="zope.schema.TextLine">
+			<description/>
+			<title>Database Password</title>
+            <default>postgres</default>
+		</field>
+		<field name="db_host" type="zope.schema.TextLine">
+			<description/>
+			<title>Database Host</title>
+            <default>localhost</default>
+		</field>
+		<field name="db_port" type="zope.schema.TextLine">
+			<description/>
+			<title>Database Port</title>
+            <default>5432</default>
+		</field>
+		<field name="db_name" type="zope.schema.TextLine">
+			<description/>
+			<title>Database Name</title>
+		</field>
+    </schema>
+</model>

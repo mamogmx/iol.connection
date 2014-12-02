@@ -1,0 +1,20 @@
+<?xml version="1.0" ?>
+<model xmlns="http://namespaces.plone.org/supermodel/schema"
+       xmlns:form="http://namespaces.plone.org/supermodel/form">
+    
+    <schema>
+		<field name="db_connection" type="zope.schema.Choice">
+			<description/>
+			<title>Database Connection</title>
+		</field>
+		<field name="db_schema" type="zope.schema.TextLine">
+			<description/>
+			<title>Database Schema</title>
+            <default>public</default>
+		</field>
+		<field name="db_table" type="zope.schema.TextLine">
+			<description/>
+			<title>Database Table</title>
+		</field>
+    </schema>
+</model>
