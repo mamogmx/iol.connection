@@ -9,5 +9,5 @@
 <object name="portal_types" meta_type="Plone Types Tool">
   <!-- -*- extra stuff goes here -*- -->
   <object name="pg_connection" meta_type="Dexterity FTI"/>
-  <!--<object name="pg_table" meta_type="Dexterity FTI" />-->
+  <object name="pg_table" meta_type="Dexterity FTI" />
 </object>

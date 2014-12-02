@@ -3,10 +3,6 @@
        xmlns:form="http://namespaces.plone.org/supermodel/form">
     
     <schema>
-		<field name="db_connection" type="zope.schema.Choice">
-			<description/>
-			<title>Database Connection</title>
-		</field>
 		<field name="db_schema" type="zope.schema.TextLine">
 			<description/>
 			<title>Database Schema</title>

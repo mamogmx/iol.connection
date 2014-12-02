@@ -1,12 +1,13 @@
 from five import grok
 from AccessControl import ClassSecurityInfo
-from plone.dexterity.content import Container
+from plone.dexterity.content import Container,DexterityContent
 
 from iol.connection import MessageFactory as _
 
 import sqlalchemy as sql
 
-from iol.connection.interfaces import IPGConnection
+from iol.connection.interfaces import IPGConnection,IPGTable
+
 
 # Interface class; used to define content-type schema.
 
@@ -22,11 +23,16 @@ class PGConnection(Container):
     def __init__(self):
         pass
     # Add your class methods and properties here
-    def getConnection(self):
-        pass
+    def getConnectionString(self):
+        return "postgres://%s:%s@%s:%s/%s" %(self.db_user,self.db_pwd,self.db_host,self.db_port,self.db_name)
+        
        
 
-
+class PGTable(DexterityContent):
+    grok.implements(IPGTable)
+    security = ClassSecurityInfo()
+    def __init__(self):
+        pass
 # View class
 # The view will automatically use a similarly named template in
 # pg_desktop_templates.
@@ -38,7 +44,7 @@ class PGConnection(Container):
 # changing the view class name and template filename to View / view.pt.
 
 
-class aView(grok.View):
+#class View(grok.View):
     """ sample view class """
 
-    pass
+#    pass

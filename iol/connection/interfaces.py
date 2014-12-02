@@ -12,7 +12,7 @@ class IPGConnection(form.Schema, IImageScaleTraversable):
 
     form.model("models/pg_connection.xml")
 
-class IPGTable(form.Schema, IImageScaleTraversable):
+class IPGTable(form.Schema):
     """
     Desktop for IOL Application connected with Postgres Database
     """
